@@ -126,11 +126,28 @@ export default function Home() {
           </div>
           <div style={{ height: 360, borderRadius: 14, background: "url('https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?auto=format&fit=crop&w=1200&q=80') center/cover", boxShadow: "0 15px 35px rgba(0,0,0,0.18)" }} />
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 12, marginTop: 32 }}>
-          {[1,2,3,4,5,6,7,8,9,10].map((i) => (
-            <div key={i} style={{ height: 130, borderRadius: 8, background: "#d1d5db", display: "flex", alignItems: "center", justifyContent: "center", color: "#6b7280", fontWeight: 700 }}>Project Image {i}</div>
-          ))}
-        </div>
+        <div style={{
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+  gap: "12px",
+  marginTop: "20px"
+}}>
+  {["IMG_1.JPEG","IMG_2.JPEG","IMG_3.JPEG","IMG_4.JPEG","IMG_5.JPEG","IMG_7.JPEG","IMG_8.JPEG","IMG_9.JPEG","IMG_10.JPEG","IMG_11.JPEG"].map((img, i) => (
+    <img
+      key={i}
+      src={`/projects/whittington/${img}`}
+      alt={`1 Whittington Avenue project ${i + 1}`}
+      style={{
+        width: "100%",
+        height: "220px",
+        objectFit: "cover",
+        borderRadius: "8px"
+      }}
+    />
+  ))}
+</div>
+      
+
       </section>
 
       <section id="about" style={{ padding: "80px 6%", background: "#f8fafc" }}>
