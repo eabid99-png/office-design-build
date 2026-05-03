@@ -157,7 +157,3 @@ export default function Home() {
     </main>
   );
 }
-<img src="/projects/whittington/image-1.jpg" alt="1 Whittington Avenue London office fit out" />
-<video controls>
-  <source src="/projects/whittington/video-1.mp4" type="video/mp4" />
-</video>
