@@ -44,6 +44,7 @@ const services = [
           <a href="#services" style={{ color: "white", textDecoration: "none" }}>SERVICES</a>
           <a href="#projects" style={{ color: "white", textDecoration: "none" }}>PROJECTS</a>
           <a href="#about" style={{ color: "white", textDecoration: "none" }}>ABOUT</a>
+          <a href="#industrial" style={{ color: "white", textDecoration: "none" }}>INDUSTRIAL</a>
           <a href="#contact" style={{ color: "white", textDecoration: "none" }}>CONTACT</a>
         </div>
       </nav>
@@ -207,7 +208,35 @@ const services = [
           <strong key={stat} style={{ fontSize: 22, color: "#c79a46" }}>{stat}</strong>
         ))}
       </section>
+<section id="industrial" style={{ padding: "80px 6%", background: "#f8fafc" }}>
+  <p style={{ color: "#c79a46", fontWeight: 800 }}>INDUSTRIAL FIT OUT</p>
+  <h2 style={{ fontSize: 38, marginTop: 8 }}>Warehouse & Industrial Spaces</h2>
 
+  <div style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+    gap: 20,
+    marginTop: 40
+  }}>
+    {[
+      "https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=900&q=80"
+    ].map((img, i) => (
+      <div
+        key={i}
+        style={{
+          height: 200,
+          backgroundImage: `url(${img})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          borderRadius: 10
+        }}
+      />
+    ))}
+  </div>
+</section>
       <section id="projects" style={{ padding: "80px 6%", background: "#f8fafc", textAlign: "center" }}>
         <p style={{ color: "#c79a46", fontWeight: 800, letterSpacing: 1 }}>OUR WORK</p>
         <h2 style={{ fontSize: 38, marginTop: 8 }}>Recent Projects</h2>
