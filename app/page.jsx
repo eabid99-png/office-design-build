@@ -56,7 +56,11 @@ export default function Home() {
           <a href="#contact" style={{ color: "white", textDecoration: "none" }}>CONTACT</a>
           <a href="tel:02082529789" style={{ background: "linear-gradient(135deg, #d8b35c, #9d722c)", color: "white", padding: "13px 20px", borderRadius: 3, textDecoration: "none", letterSpacing: 1.2 }}>GET A QUOTE</a>
         </div>
-      </nav>
+     <img 
+  src="/logo.png" 
+  alt="Workspace Design & Build London"
+  style={{ height: 60 }}
+/>
 
       <section id="home" style={{ minHeight: "82vh", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", background: "#05080c", color: "white" }}>
         <div style={{ padding: "90px 8%", display: "flex", flexDirection: "column", justifyContent: "center" }}>
