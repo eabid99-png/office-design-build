@@ -4,14 +4,63 @@ export default function Home() {
 
       {/* NAV */}
       <nav style={{
-        background: "#05080c",
-        color: "white",
-        padding: "18px 6%",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        flexWrap: "wrap",
-        gap: 20
+  background: "#05080c",
+  color: "white",
+  padding: "18px 6%",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  position: "relative",
+  zIndex: 9999
+}}>
+  <img src="/logo.png" style={{ height: 90 }} />
+
+  <div style={{ display: "flex", gap: 25, alignItems: "center" }}>
+    <a href="/" style={{ color: "white", textDecoration: "none" }}>Home</a>
+
+    <div style={{ position: "relative" }}>
+      <button
+        onClick={(e) => {
+          const menu = e.currentTarget.nextSibling;
+          menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }}
+        style={{
+          background: "none",
+          border: "none",
+          color: "white",
+          fontSize: 16,
+          cursor: "pointer"
+        }}
+      >
+        Our Services ▼
+      </button>
+
+      <div style={{
+        display: "none",
+        position: "absolute",
+        top: "35px",
+        left: 0,
+        background: "white",
+        minWidth: 240,
+        boxShadow: "0 10px 30px rgba(0,0,0,0.25)",
+        zIndex: 99999
+      }}>
+        <a href="#glass" style={{ display: "block", padding: 14, color: "#111", textDecoration: "none" }}>Glass Partitions</a>
+        <a href="#refurb" style={{ display: "block", padding: 14, color: "#111", textDecoration: "none" }}>Office Refurbishment</a>
+        <a href="#ceilings" style={{ display: "block", padding: 14, color: "#111", textDecoration: "none" }}>Suspended Ceilings</a>
+        <a href="#flooring" style={{ display: "block", padding: 14, color: "#111", textDecoration: "none" }}>Flooring</a>
+        <a href="#decorating" style={{ display: "block", padding: 14, color: "#111", textDecoration: "none" }}>Decorating</a>
+        <a href="#joinery" style={{ display: "block", padding: 14, color: "#111", textDecoration: "none" }}>Doors & Joinery</a>
+      </div>
+    </div>
+
+    <a href="#project" style={{ color: "white", textDecoration: "none" }}>Projects</a>
+    <a href="#contact" style={{ color: "white", textDecoration: "none" }}>Contact</a>
+    <a href="tel:02082529789" style={{ background: "#c79a46", color: "white", padding: "10px 16px", textDecoration: "none" }}>
+      0208 252 9789
+    </a>
+  </div>
+</nav>
       }}>
         <img src="/logo.png" style={{ height: 85 }} />
 
