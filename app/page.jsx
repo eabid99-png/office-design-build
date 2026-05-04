@@ -1,320 +1,159 @@
 export default function Home() {
-const services = [
-  {
-    title: "Office Fit Out",
-    text: "Modern office environments designed for productivity and brand impact.",
-    icon: "▧",
-    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    title: "Commercial Interiors",
-    text: "Reception areas, meeting rooms and client-facing spaces built to impress.",
-    icon: "✎",
-    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    title: "Industrial Fit Out",
-    text: "Warehouse, workshop and industrial unit fit outs built for performance.",
-    icon: "◴",
-    image: "https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    title: "Warehouse Offices",
-    text: "Office and mezzanine builds inside industrial environments.",
-    icon: "▣",
-    image: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=80",
-  },
-];
-
-  const projects = [
-    "1 Whittington Avenue",
-    "Corporate Workspace",
-    "Meeting Suite",
-    "Breakout Area",
+  const services = [
+    {
+      title: "Workspace Planning",
+      text: "Intelligent layouts that maximise space, improve flow and create better places to work.",
+      img: "IMG_1.JPEG",
+    },
+    {
+      title: "Interior Design",
+      text: "Refined workplace interiors designed around your brand, culture and client experience.",
+      img: "IMG_2.JPEG",
+    },
+    {
+      title: "Design & Build",
+      text: "A complete workspace delivery service, from concept and specification to final handover.",
+      img: "IMG_3.JPEG",
+    },
+    {
+      title: "Furniture & Finishes",
+      text: "Quality furniture, lighting, finishes and details that give your workplace a premium finish.",
+      img: "IMG_4.JPEG",
+    },
   ];
 
+  const images = [
+    "IMG_1.JPEG",
+    "IMG_2.JPEG",
+    "IMG_3.JPEG",
+    "IMG_4.JPEG",
+    "IMG_5.JPEG",
+    "IMG_7.JPEG",
+    "IMG_8.JPEG",
+    "IMG_9.JPEG",
+    "IMG_10.JPEG",
+    "IMG_11.JPEG",
+  ];
+
+  const font = "'Montserrat', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif";
+
   return (
-    <main style={{ fontFamily: "Arial, sans-serif", margin: 0, color: "#111827", background: "#ffffff" }}>
-      <nav style={{ position: "sticky", top: 0, zIndex: 10, background: "rgba(8,13,18,0.96)", color: "white", padding: "18px 6%", display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <div style={{ width: 38, height: 38, border: "2px solid #c79a46", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800 }}>OD</div>
-          <strong style={{ letterSpacing: 1 }}>OFFICE DESIGN & BUILD</strong>
-        </div>
-        <div style={{ display: "flex", gap: 24, fontSize: 13, fontWeight: 700 }}>
+    <main style={{ fontFamily: font, margin: 0, color: "#111827", background: "#ffffff" }}>
+      <nav style={{ position: "sticky", top: 0, zIndex: 50, background: "rgba(5, 8, 12, 0.96)", color: "white", padding: "16px 6%", display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid rgba(199,154,70,0.24)", flexWrap: "wrap", gap: 18 }}>
+        <a href="#home" style={{ color: "white", textDecoration: "none", display: "flex", alignItems: "center", gap: 16 }}>
+          <img src="/logo.png" alt="Workspace Design & Build London logo" style={{ height: 56, width: "auto", objectFit: "contain" }} />
+          <div style={{ lineHeight: 1.05 }}>
+            <div style={{ fontSize: 18, fontWeight: 500, letterSpacing: 6 }}>WORKSPACE</div>
+            <div style={{ fontSize: 14, fontWeight: 500, letterSpacing: 5, color: "#c79a46", marginTop: 4 }}>DESIGN & BUILD</div>
+            <div style={{ fontSize: 10, fontWeight: 500, letterSpacing: 5, marginTop: 6 }}>LONDON</div>
+          </div>
+        </a>
+
+        <div style={{ display: "flex", gap: 26, alignItems: "center", fontSize: 12, fontWeight: 700, letterSpacing: 1.6, flexWrap: "wrap" }}>
           <a href="#services" style={{ color: "white", textDecoration: "none" }}>SERVICES</a>
-          <a href="#projects" style={{ color: "white", textDecoration: "none" }}>PROJECTS</a>
+          <a href="#project" style={{ color: "white", textDecoration: "none" }}>PROJECT</a>
           <a href="#about" style={{ color: "white", textDecoration: "none" }}>ABOUT</a>
-          <a href="#industrial" style={{ color: "white", textDecoration: "none" }}>INDUSTRIAL</a>
           <a href="#contact" style={{ color: "white", textDecoration: "none" }}>CONTACT</a>
+          <a href="tel:02082529789" style={{ background: "linear-gradient(135deg, #d8b35c, #9d722c)", color: "white", padding: "13px 20px", borderRadius: 3, textDecoration: "none", letterSpacing: 1.2 }}>GET A QUOTE</a>
         </div>
       </nav>
 
-      <section style={{
-  minHeight: "78vh",
-  padding: "90px 6%",
-  color: "white",
-  display: "flex",
-  alignItems: "center",
-  position: "relative",
-  overflow: "hidden"
-}}>
-  <style>
-    {`
-      @keyframes heroFade {
-        0% { opacity: 0; }
-        10% { opacity: 1; }
-        30% { opacity: 1; }
-        40% { opacity: 0; }
-        100% { opacity: 0; }
-      }
-    `}
-  </style>
-<div style={{
-  position: "absolute",
-  inset: 0,
-  zIndex: 0
-}}>
-  {[
-    "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80",
-    "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=80",
-    "https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1600&q=80",
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1600&q=80"
-  ].map((img, i) => (
-    <div
-      key={i}
-      style={{
-        position: "absolute",
-        inset: 0,
-        backgroundImage: `url(${img})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        opacity: 0,
-        animation: "heroFade 25s infinite",
-        animationDelay: `${i * 5}s`
-      }}
-    />
-  ))}
-</div>
-  <div style={{
-    position: "absolute",
-    inset: 0,
-    background: "linear-gradient(90deg, rgba(0,0,0,0.86), rgba(0,0,0,0.42))",
-    zIndex: 1
-  }} />
-
-  <div style={{
-    position: "absolute",
-    inset: 0,
-    zIndex: 0
-  }}>
-    {["IMG_1.JPEG","IMG_2.JPEG","IMG_3.JPEG","IMG_4.JPEG","IMG_5.JPEG"].map((img, i) => (
-      <div
-        key={img}
-        style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage: `url('/projects/whittington/${img}')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          opacity: 0,
-          animation: "heroFade 25s infinite",
-          animationDelay: `${i * 5}s`
-        }}
-      />
-    ))}
-  </div>
-
-  <div style={{ maxWidth: 720, position: "relative", zIndex: 2 }}>
+      <section id="home" style={{ minHeight: "82vh", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", background: "#05080c", color: "white" }}>
+        <div style={{ padding: "90px 8%", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+          <p style={{ color: "#c79a46", fontWeight: 500, letterSpacing: 4, marginBottom: 18 }}>LONDON WORKSPACE DESIGN & BUILD SPECIALISTS</p>
+          <h1 style={{ fontSize: "clamp(40px, 6vw, 78px)", lineHeight: 1.02, margin: 0, fontWeight: 500, letterSpacing: 8 }}>
+            WORKSPACE<br />DESIGN & BUILD<br /><span style={{ color: "#c79a46" }}>LONDON</span>
+          </h1>
+          <p style={{ fontSize: 20, lineHeight: 1.65, marginTop: 28, color: "#e5e7eb", maxWidth: 680, letterSpacing: 0.4 }}>
+            We design and deliver high-quality workspace environments across London, combining intelligent planning, refined interiors and professional build execution.
+          </p>
+          <div style={{ display: "flex", gap: 14, marginTop: 36, flexWrap: "wrap" }}>
+            <a href="#project" style={{ background: "linear-gradient(135deg, #d8b35c, #9d722c)", color: "white", padding: "16px 26px", borderRadius: 3, textDecoration: "none", fontWeight: 700, letterSpacing: 1.4 }}>VIEW OUR WORK</a>
+            <a href="tel:02082529789" style={{ border: "1px solid rgba(255,255,255,0.7)", color: "white", padding: "16px 26px", borderRadius: 3, textDecoration: "none", fontWeight: 700, letterSpacing: 1.4 }}>CALL 0208 252 9789</a>
+          </div>
         </div>
+        <div style={{ minHeight: 520, background: "linear-gradient(90deg, rgba(5,8,12,0.25), rgba(5,8,12,0.05)), url('/projects/whittington/IMG_1.JPEG') center/cover" }} />
       </section>
 
-      <section style={{ background: "#0b1117", color: "white", padding: "28px 6%", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 20 }}>
-        {["End-to-End Service", "London Experts", "On Time, On Budget", "Sustainable Design"].map((item) => (
-          <div key={item}>
-            <strong style={{ color: "#c79a46" }}>✓</strong> <strong>{item}</strong>
-            <p style={{ margin: "6px 0 0", color: "#cbd5e1", fontSize: 14 }}>Reliable delivery from concept to completion.</p>
+      <section style={{ background: "#080d12", color: "white", padding: "30px 6%", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 24, borderTop: "1px solid rgba(199,154,70,0.25)", borderBottom: "1px solid rgba(199,154,70,0.25)" }}>
+        {["Bespoke Design", "Expert Build", "Reliable Delivery", "London Focused"].map((item) => (
+          <div key={item} style={{ display: "flex", gap: 12, alignItems: "center", justifyContent: "center", textAlign: "center" }}>
+            <span style={{ color: "#c79a46", fontSize: 20 }}>◆</span>
+            <strong style={{ letterSpacing: 2, fontWeight: 500 }}>{item.toUpperCase()}</strong>
           </div>
         ))}
       </section>
 
-      <section id="services" style={{ padding: "80px 6%", textAlign: "center" }}>
-        <p style={{ color: "#c79a46", fontWeight: 800, letterSpacing: 1 }}>OUR SERVICES</p>
-        <h2 style={{ fontSize: 38, marginTop: 8 }}>Complete Office Fit Out Solutions</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 28, marginTop: 42, textAlign: "left" }}>
+      <section id="services" style={{ padding: "90px 6%", background: "#ffffff", textAlign: "center" }}>
+        <p style={{ color: "#c79a46", fontWeight: 600, letterSpacing: 3 }}>OUR SERVICES</p>
+        <h2 style={{ fontSize: "clamp(30px, 4vw, 46px)", margin: "10px 0 14px", fontWeight: 500, letterSpacing: 1.5 }}>Complete Workspace Design & Build Solutions</h2>
+        <p style={{ maxWidth: 780, margin: "0 auto", color: "#4b5563", fontSize: 18, lineHeight: 1.8 }}>
+          A professional service for businesses that want their workplace to look impressive, work efficiently and be delivered with care.
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(245px, 1fr))", gap: 28, marginTop: 46, textAlign: "left" }}>
           {services.map((s) => (
-            <article key={s.title} style={{ background: "white", border: "1px solid #e5e7eb", borderRadius: 12, overflow: "hidden", boxShadow: "0 10px 30px rgba(0,0,0,0.08)" }}>
-             <div style={{ height: 150, background: `url('${s.image}') center/cover` }} />
-              <div style={{ padding: 24 }}>
-                <div style={{ width: 46, height: 46, border: "1px solid #c79a46", color: "#c79a46", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24, marginBottom: 18 }}>{s.icon}</div>
-                <h3 style={{ margin: "0 0 10px", fontSize: 21 }}>{s.title}</h3>
-                <p style={{ color: "#4b5563", lineHeight: 1.6 }}>{s.text}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-<section id="fit-out-types" style={{ padding: "80px 6%", background: "#f8fafc", textAlign: "center" }}>
-  <p style={{ color: "#c79a46", fontWeight: 800 }}>FIT OUT TYPES</p>
-  <h2 style={{ fontSize: 38, marginTop: 8 }}>Office & Industrial Fit Out Services</h2>
-  <p style={{ maxWidth: 760, margin: "0 auto 40px", color: "#4b5563", lineHeight: 1.7 }}>
-    We deliver practical, high-quality fit out solutions for commercial offices, industrial units and specialist working environments across London and the surrounding areas.
-  </p>
-
-  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24, textAlign: "left" }}>
-    {[
-      {
-        title: "CAT A Fit Out",
-        text: "Landlord-ready spaces including ceilings, lighting, flooring, decoration and basic services."
-      },
-      {
-        title: "CAT B Fit Out",
-        text: "Fully finished workspaces tailored to the occupier, including meeting rooms, kitchens, furniture and branding."
-      },
-      {
-        title: "Office Refurbishment",
-        text: "Modernising existing offices to improve appearance, layout, comfort and performance."
-      },
-      {
-        title: "Design & Build",
-        text: "A complete service from initial concept and space planning through to construction and handover."
-      },
-      {
-        title: "Industrial Unit Fit Out",
-        text: "Practical fit out works for warehouses, workshops, trade counters and light industrial spaces."
-      },
-      {
-        title: "Mezzanine Offices",
-        text: "Creating additional office, storage or production space within industrial buildings."
-      },
-      {
-        title: "Warehouse Office Build",
-        text: "Internal office construction within warehouse and logistics environments."
-      },
-      {
-        title: "Dilapidations & Strip Out",
-        text: "End-of-lease strip out, reinstatement and repair works for commercial and industrial properties."
-      }
-    ].map((item) => (
-      <div key={item.title} style={{ background: "white", padding: 24, borderRadius: 12, boxShadow: "0 8px 24px rgba(0,0,0,0.08)" }}>
-        <h3 style={{ marginTop: 0 }}>{item.title}</h3>
-        <p style={{ color: "#4b5563", lineHeight: 1.6 }}>{item.text}</p>
-      </div>
-    ))}
-  </div>
-</section>
-      <section style={{ background: "#0b1117", color: "white", padding: "38px 6%", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 20, textAlign: "center" }}>
-        {["10+ Years Experience", "250+ Projects Completed", "1M+ Sq Ft Delivered", "98% Client Satisfaction"].map((stat) => (
-          <strong key={stat} style={{ fontSize: 22, color: "#c79a46" }}>{stat}</strong>
-        ))}
-      </section>
-<section id="industrial" style={{ padding: "80px 6%", background: "#f8fafc" }}>
-  <p style={{ color: "#c79a46", fontWeight: 800 }}>INDUSTRIAL FIT OUT</p>
-  <h2 style={{ fontSize: 38, marginTop: 8 }}>Warehouse & Industrial Spaces</h2>
-
-  <div style={{
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-    gap: 20,
-    marginTop: 40
-  }}>
-    {[
-      "https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=900&q=80"
-    ].map((img, i) => (
-      <div
-        key={i}
-        style={{
-          height: 200,
-          backgroundImage: `url(${img})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          borderRadius: 10
-        }}
-      />
-    ))}
-  </div>
-</section>
-      <section id="projects" style={{ padding: "80px 6%", background: "#f8fafc", textAlign: "center" }}>
-        <p style={{ color: "#c79a46", fontWeight: 800, letterSpacing: 1 }}>OUR WORK</p>
-        <h2 style={{ fontSize: 38, marginTop: 8 }}>Recent Projects</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 24, marginTop: 38, textAlign: "left" }}>
-          {projects.map((p) => (
-            <article key={p} style={{ background: "white", borderRadius: 10, overflow: "hidden", boxShadow: "0 8px 24px rgba(0,0,0,0.08)" }}>
-              <div style={{ height: 150, background: "url('https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=900&q=80') center/cover" }} />
-              <div style={{ padding: 18 }}>
-                <h3 style={{ margin: "0 0 4px" }}>{p}</h3>
-                <p style={{ margin: 0, color: "#6b7280" }}>London</p>
-                <a href="#whittington" style={{ display: "inline-block", marginTop: 12, color: "#b88735", textDecoration: "none", fontWeight: 700 }}>View Project →</a>
+            <article key={s.title} style={{ background: "white", border: "1px solid #e5e7eb", borderRadius: 2, overflow: "hidden", boxShadow: "0 16px 35px rgba(0,0,0,0.08)" }}>
+              <div style={{ height: 185, background: `url('/projects/whittington/${s.img}') center/cover` }} />
+              <div style={{ padding: 25 }}>
+                <h3 style={{ fontSize: 21, margin: "0 0 10px", fontWeight: 600, letterSpacing: 1 }}>{s.title}</h3>
+                <p style={{ color: "#4b5563", lineHeight: 1.7, margin: 0 }}>{s.text}</p>
               </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="whittington" style={{ padding: "80px 6%" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 36, alignItems: "center" }}>
+      <section id="project" style={{ padding: "90px 6%", background: "#f8fafc" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 42, alignItems: "center" }}>
           <div>
-            <p style={{ color: "#c79a46", fontWeight: 800 }}>FEATURED PROJECT</p>
-            <h2 style={{ fontSize: 38, marginTop: 8 }}>1 Whittington Avenue, London</h2>
-            <p style={{ color: "#4b5563", lineHeight: 1.7, fontSize: 17 }}>
-              A complete office transformation designed to create a refined, practical and modern working environment. This project will include your best 10 project images once uploaded into the site.
+            <p style={{ color: "#c79a46", fontWeight: 600, letterSpacing: 3 }}>FEATURED PROJECT</p>
+            <h2 style={{ fontSize: "clamp(32px, 4vw, 48px)", margin: "10px 0 18px", fontWeight: 500, letterSpacing: 1.5 }}>1 Whittington Avenue, London</h2>
+            <p style={{ color: "#4b5563", lineHeight: 1.8, fontSize: 18 }}>
+              A complete workspace transformation focused on practical planning, modern finishes and a refined professional environment.
             </p>
-            <ul style={{ lineHeight: 2, color: "#374151", paddingLeft: 20 }}>
-              <li>End-to-end design and build</li>
-              <li>Modern workspace planning</li>
-              <li>High-quality finishes and furniture</li>
-              <li>Delivered for a London commercial client</li>
+            <ul style={{ lineHeight: 2.1, color: "#374151", paddingLeft: 20, fontSize: 16 }}>
+              <li>Workspace design and refurbishment works</li>
+              <li>Modern layout and workspace improvement</li>
+              <li>Quality finishes, furniture and detail work</li>
+              <li>Delivered for a London commercial workspace</li>
             </ul>
           </div>
-          <div style={{ height: 360, borderRadius: 14, background: "url('https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?auto=format&fit=crop&w=1200&q=80') center/cover", boxShadow: "0 15px 35px rgba(0,0,0,0.18)" }} />
+          <div style={{ height: 420, borderRadius: 2, background: "url('/projects/whittington/IMG_10.JPEG') center/cover", boxShadow: "0 22px 50px rgba(0,0,0,0.2)" }} />
         </div>
-        <div style={{
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-  gap: "12px",
-  marginTop: "20px"
-}}>
-  {["IMG_1.JPEG","IMG_2.JPEG","IMG_3.JPEG","IMG_4.JPEG","IMG_5.JPEG","IMG_7.JPEG","IMG_8.JPEG","IMG_9.JPEG","IMG_10.JPEG","IMG_11.JPEG"].map((img, i) => (
-    <img
-      key={i}
-      src={`/projects/whittington/${img}`}
-      alt={`1 Whittington Avenue project ${i + 1}`}
-      style={{
-        width: "100%",
-        height: "220px",
-        objectFit: "cover",
-        borderRadius: "8px"
-      }}
-    />
-  ))}
-</div>
-      
 
-      </section>
-
-      <section id="about" style={{ padding: "80px 6%", background: "#f8fafc" }}>
-        <div style={{ maxWidth: 900 }}>
-          <p style={{ color: "#c79a46", fontWeight: 800 }}>ABOUT US</p>
-          <h2 style={{ fontSize: 38, marginTop: 8 }}>London Office Fit Out Specialists</h2>
-          <p style={{ color: "#4b5563", lineHeight: 1.75, fontSize: 18 }}>
-            Office Design & Build is a London-based office fit out and interior design company. We create inspiring workplaces that help businesses attract talent, encourage collaboration and make better use of their space.
-          </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))", gap: 14, marginTop: 42 }}>
+          {images.map((img, i) => (
+            <img key={img} src={`/projects/whittington/${img}`} alt={`1 Whittington Avenue London workspace design and build ${i + 1}`} style={{ width: "100%", height: i === 0 ? 300 : 220, objectFit: "cover", borderRadius: 2, boxShadow: "0 10px 25px rgba(0,0,0,0.12)", gridColumn: i === 0 ? "span 2" : "auto" }} />
+          ))}
         </div>
       </section>
 
-      <section id="contact" style={{ padding: "70px 6%", background: "#0b1117", color: "white", textAlign: "center" }}>
-        <h2 style={{ fontSize: 34 }}>Ready to create your perfect workspace?</h2>
-        <p>Let’s talk about your project.</p>
-        <a href="tel:02082529789" style={{ display: "inline-block", background: "#c79a46", color: "white", padding: "14px 24px", borderRadius: 4, textDecoration: "none", fontWeight: 800, marginTop: 12 }}>CALL 0208 252 9789</a>
-        <p style={{ marginTop: 24 }}>hello@officedesignbuild.london</p>
+      <section id="about" style={{ padding: "90px 6%", background: "white" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 42, alignItems: "center" }}>
+          <div style={{ height: 420, borderRadius: 2, background: "url('/projects/whittington/IMG_11.JPEG') center/cover", boxShadow: "0 22px 50px rgba(0,0,0,0.16)" }} />
+          <div>
+            <p style={{ color: "#c79a46", fontWeight: 600, letterSpacing: 3 }}>ABOUT US</p>
+            <h2 style={{ fontSize: "clamp(32px, 4vw, 46px)", margin: "10px 0 18px", fontWeight: 500, letterSpacing: 1.5 }}>London Workspace Design & Build Specialists</h2>
+            <p style={{ color: "#4b5563", lineHeight: 1.8, fontSize: 18 }}>
+              Workspace Design & Build creates professional interiors for businesses across London. We focus on clear communication, quality workmanship and spaces that make a strong first impression.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <footer style={{ padding: "30px 6%", background: "#080d12", color: "#cbd5e1", display: "flex", justifyContent: "space-between", gap: 20, flexWrap: "wrap" }}>
-        <strong style={{ color: "white" }}>OFFICE DESIGN & BUILD</strong>
-        <span>© {new Date().getFullYear()} Office Design & Build. All rights reserved.</span>
+      <section id="contact" style={{ padding: "80px 6%", background: "#080d12", color: "white", textAlign: "center" }}>
+        <h2 style={{ fontSize: "clamp(32px, 4vw, 46px)", margin: 0, fontWeight: 500, letterSpacing: 1.6 }}>Ready to create your perfect workspace?</h2>
+        <p style={{ color: "#cbd5e1", fontSize: 18 }}>Talk to us about your workspace design and build project.</p>
+        <div style={{ display: "flex", justifyContent: "center", gap: 16, flexWrap: "wrap", marginTop: 28 }}>
+          <a href="tel:02082529789" style={{ background: "linear-gradient(135deg, #d8b35c, #9d722c)", color: "white", padding: "15px 24px", borderRadius: 3, textDecoration: "none", fontWeight: 700, letterSpacing: 1.4 }}>CALL 0208 252 9789</a>
+          <a href="mailto:hello@officedesignbuild.london" style={{ border: "1px solid rgba(255,255,255,0.5)", color: "white", padding: "15px 24px", borderRadius: 3, textDecoration: "none", fontWeight: 700, letterSpacing: 1.4 }}>EMAIL US</a>
+        </div>
+        <p style={{ marginTop: 26, letterSpacing: 1.2 }}>hello@officedesignbuild.london</p>
+      </section>
+
+      <footer style={{ padding: "32px 6%", background: "#05080c", color: "#cbd5e1", display: "flex", justifyContent: "space-between", gap: 20, flexWrap: "wrap", letterSpacing: 1 }}>
+        <strong style={{ color: "white", fontWeight: 500 }}>WORKSPACE DESIGN & BUILD LONDON</strong>
+        <span>© {new Date().getFullYear()} Workspace Design & Build. All rights reserved.</span>
       </footer>
     </main>
   );
