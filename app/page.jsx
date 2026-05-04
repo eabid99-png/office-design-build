@@ -1,26 +1,30 @@
 export default function Home() {
-  const services = [
-    {
-      title: "Space Planning",
-      text: "Smart layouts that maximise space, improve flow and support productive working.",
-      icon: "▧",
-    },
-    {
-      title: "Interior Design",
-      text: "Modern workplace interiors tailored to your brand, culture and team needs.",
-      icon: "✎",
-    },
-    {
-      title: "Build & Fit Out",
-      text: "High-quality construction and installation delivered with care from start to finish.",
-      icon: "◴",
-    },
-    {
-      title: "Furniture & Finishing",
-      text: "Desks, seating, finishes and details that complete your workplace properly.",
-      icon: "▣",
-    },
-  ];
+const services = [
+  {
+    title: "Office Fit Out",
+    text: "Modern office environments designed for productivity and brand impact.",
+    icon: "▧",
+    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    title: "Commercial Interiors",
+    text: "Reception areas, meeting rooms and client-facing spaces built to impress.",
+    icon: "✎",
+    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    title: "Industrial Fit Out",
+    text: "Warehouse, workshop and industrial unit fit outs built for performance.",
+    icon: "◴",
+    image: "https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    title: "Warehouse Offices",
+    text: "Office and mezzanine builds inside industrial environments.",
+    icon: "▣",
+    image: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=80",
+  },
+];
 
   const projects = [
     "1 Whittington Avenue",
