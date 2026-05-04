@@ -114,16 +114,67 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section style={{ padding: "80px 6%", textAlign: "center" }}>
-        <h2>Get a Quote</h2>
-        <p>Call us today on 0208 252 9789</p>
-      </section>
+      {/* CONTACT FORM */}
+<section id="contact" style={{ padding: "80px 6%", background: "#f5f5f5" }}>
+  <div style={{ maxWidth: 900, margin: "0 auto", background: "white", padding: 40, boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }}>
+    <h2 style={{ textAlign: "center", marginBottom: 10 }}>Contact Us</h2>
+    <p style={{ textAlign: "center", marginBottom: 30 }}>
+      Tell us about your project and we’ll get back to you.
+    </p>
 
-      {/* FOOTER */}
-      <footer style={{ background: "#05080c", color: "white", padding: "30px 6%" }}>
-        © Workspace Design & Build London
-      </footer>
+    <form action="https://formsubmit.co/hello@officedesignbuild.london" method="POST">
+      <input type="hidden" name="_subject" value="New website enquiry" />
+
+      <input
+        name="name"
+        placeholder="Your Name"
+        required
+        style={{ width: "100%", padding: 14, marginBottom: 14 }}
+      />
+
+      <input
+        name="email"
+        type="email"
+        placeholder="Email Address"
+        required
+        style={{ width: "100%", padding: 14, marginBottom: 14 }}
+      />
+
+      <input
+        name="phone"
+        placeholder="Phone Number"
+        style={{ width: "100%", padding: 14, marginBottom: 14 }}
+      />
+
+      <textarea
+        name="message"
+        placeholder="Tell us about your project"
+        rows="6"
+        required
+        style={{ width: "100%", padding: 14, marginBottom: 14 }}
+      />
+
+      <button
+        type="submit"
+        style={{
+          background: "#c79a46",
+          color: "white",
+          padding: "15px 24px",
+          border: 0,
+          width: "100%",
+          fontWeight: "bold",
+          cursor: "pointer"
+        }}
+      >
+        Send Enquiry
+      </button>
+    </form>
+
+    <p style={{ textAlign: "center", marginTop: 20 }}>
+      Or call us directly: <strong>0208 252 9789</strong>
+    </p>
+  </div>
+</section>
 
     </main>
   );
