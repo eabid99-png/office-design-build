@@ -16,7 +16,40 @@ export default function Home() {
   padding: "18px 6%",
   display: "flex",
   justifyContent: "space-between",
-  alignItems: "center"
+  alignItems: "center",
+  flexWrap: "wrap"
+}}>
+
+  {/* LOGO */}
+  <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+    <img src="/logo.png" style={{ height: 80 }} />
+  </div>
+
+  {/* MENU */}
+  <div style={{
+    display: "flex",
+    gap: 25,
+    alignItems: "center",
+    flexWrap: "wrap"
+  }}>
+
+    <a href="#services" style={{ color: "white", textDecoration: "none" }}>Services</a>
+    <a href="#project" style={{ color: "white", textDecoration: "none" }}>Projects</a>
+    <a href="#process" style={{ color: "white", textDecoration: "none" }}>Process</a>
+    <a href="#contact" style={{ color: "white", textDecoration: "none" }}>Contact</a>
+
+    <a href="tel:02082529789" style={{
+      background: "#c79a46",
+      padding: "10px 16px",
+      textDecoration: "none",
+      color: "white"
+    }}>
+      0208 252 9789
+    </a>
+
+  </div>
+
+</nav>
 }}>
 
   {/* LOGO */}
