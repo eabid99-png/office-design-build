@@ -79,7 +79,7 @@ const services = [
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 28, marginTop: 42, textAlign: "left" }}>
           {services.map((s) => (
             <article key={s.title} style={{ background: "white", border: "1px solid #e5e7eb", borderRadius: 12, overflow: "hidden", boxShadow: "0 10px 30px rgba(0,0,0,0.08)" }}>
-              <div style={{ height: 150, background: "url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80') center/cover" }} />
+             <div style={{ height: 150, background: `url('${s.image}') center/cover` }} />
               <div style={{ padding: 24 }}>
                 <div style={{ width: 46, height: 46, border: "1px solid #c79a46", color: "#c79a46", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24, marginBottom: 18 }}>{s.icon}</div>
                 <h3 style={{ margin: "0 0 10px", fontSize: 21 }}>{s.title}</h3>
