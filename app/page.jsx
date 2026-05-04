@@ -36,14 +36,12 @@ export default function Home() {
       </button>
 
       <div style={{
-        display: "none",
-        position: "absolute",
-        top: "35px",
-        left: 0,
-        background: "white",
-        minWidth: 240,
-        boxShadow: "0 10px 30px rgba(0,0,0,0.25)",
-        zIndex: 99999
+        <a href="#glass" style={{ display: "block", padding: 14 }}>Glass Partitions</a>
+<a href="#refurb" style={{ display: "block", padding: 14 }}>Office Refurbishment</a>
+<a href="#ceilings" style={{ display: "block", padding: 14 }}>Suspended Ceilings</a>
+<a href="#flooring" style={{ display: "block", padding: 14 }}>Flooring</a>
+<a href="#decorating" style={{ display: "block", padding: 14 }}>Decorating</a>
+<a href="#joinery" style={{ display: "block", padding: 14 }}>Doors & Joinery</a>
       }}>
         <a href="#glass" style={{ display: "block", padding: 14, color: "#111", textDecoration: "none" }}>Glass Partitions</a>
         <a href="#refurb" style={{ display: "block", padding: 14, color: "#111", textDecoration: "none" }}>Office Refurbishment</a>
