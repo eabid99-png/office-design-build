@@ -2,35 +2,46 @@ export default function Home() {
   return (
     <main style={{ fontFamily: "'Montserrat', Arial, sans-serif", margin: 0 }}>
 
-      {/* NAV */}
-     <nav style={{
+      <nav style={{
   background: "#05080c",
   color: "white",
   padding: "18px 6%",
   display: "flex",
   justifyContent: "space-between",
-  alignItems: "center",
-  position: "relative",
-  zIndex: 9999
+  alignItems: "center"
 }}>
   <img src="/logo.png" style={{ height: 90 }} />
 
   <div style={{ display: "flex", gap: 25, alignItems: "center" }}>
-    <a href="/" style={{ color: "white", textDecoration: "none" }}>Home</a>
 
-    <details style={{ position: "relative" }}>
-      <summary style={{ color: "white", cursor: "pointer", fontSize: 16 }}>
-        Our Services ▼
-      </summary>
+    <a href="/" style={{ color: "white" }}>Home</a>
+
+    {/* DROPDOWN */}
+    <div style={{ position: "relative" }}>
+      <span style={{ color: "white" }}>Our Services</span>
 
       <div style={{
         position: "absolute",
-        top: "35px",
+        top: 25,
         left: 0,
         background: "white",
-        minWidth: 260,
-        boxShadow: "0 10px 30px rgba(0,0,0,0.35)",
-        zIndex: 99999
+        display: "block",
+        minWidth: 220,
+        boxShadow: "0 10px 20px rgba(0,0,0,0.2)"
+      }}>
+        <div style={{ padding: 10 }}>Glass Partitions</div>
+        <div style={{ padding: 10 }}>Refurbishment</div>
+        <div style={{ padding: 10 }}>Ceilings</div>
+        <div style={{ padding: 10 }}>Flooring</div>
+        <div style={{ padding: 10 }}>Decorating</div>
+        <div style={{ padding: 10 }}>Joinery</div>
+      </div>
+    </div>
+
+    <a href="#contact" style={{ color: "white" }}>Contact</a>
+
+  </div>
+</nav>
       }}>
         <a href="#glass" style={{ display: "block", padding: 14, color: "#111", textDecoration: "none" }}>Glass Partitions</a>
         <a href="#refurb" style={{ display: "block", padding: 14, color: "#111", textDecoration: "none" }}>Office Refurbishment</a>
