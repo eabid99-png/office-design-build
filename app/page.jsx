@@ -68,7 +68,33 @@ const services = [
       }
     `}
   </style>
-
+<div style={{
+  position: "absolute",
+  inset: 0,
+  zIndex: 0
+}}>
+  {[
+    "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80",
+    "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=80",
+    "https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1600&q=80",
+    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+    "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1600&q=80"
+  ].map((img, i) => (
+    <div
+      key={i}
+      style={{
+        position: "absolute",
+        inset: 0,
+        backgroundImage: `url(${img})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        opacity: 0,
+        animation: "heroFade 25s infinite",
+        animationDelay: `${i * 5}s`
+      }}
+    />
+  ))}
+</div>
   <div style={{
     position: "absolute",
     inset: 0,
