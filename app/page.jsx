@@ -24,7 +24,7 @@ export default function Home() {
     <img
   src="/logo.png"
   alt="Workspace Design & Build London"
-  style={{ height: 55 }}
+  style={{ height: 80 }}
 />
   </div>
 
