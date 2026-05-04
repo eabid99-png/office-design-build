@@ -18,6 +18,44 @@ export default function Home() {
   <div style={{ display: "flex", gap: 25, alignItems: "center" }}>
     <a href="/" style={{ color: "white", textDecoration: "none" }}>Home</a>
 
+    <details style={{ position: "relative" }}>
+      <summary style={{
+        color: "white",
+        cursor: "pointer",
+        listStyle: "none",
+        fontSize: 16
+      }}>
+        Our Services ▼
+      </summary>
+
+      <div style={{
+        position: "absolute",
+        top: "35px",
+        left: 0,
+        background: "white",
+        minWidth: 260,
+        boxShadow: "0 10px 30px rgba(0,0,0,0.35)",
+        zIndex: 99999
+      }}>
+        <a href="#glass" style={{ display: "block", padding: 14, color: "#111", textDecoration: "none" }}>Glass Partitions</a>
+        <a href="#refurb" style={{ display: "block", padding: 14, color: "#111", textDecoration: "none" }}>Office Refurbishment</a>
+        <a href="#ceilings" style={{ display: "block", padding: 14, color: "#111", textDecoration: "none" }}>Suspended Ceilings</a>
+        <a href="#flooring" style={{ display: "block", padding: 14, color: "#111", textDecoration: "none" }}>Flooring</a>
+        <a href="#decorating" style={{ display: "block", padding: 14, color: "#111", textDecoration: "none" }}>Decorating</a>
+        <a href="#joinery" style={{ display: "block", padding: 14, color: "#111", textDecoration: "none" }}>Doors & Joinery</a>
+      </div>
+    </details>
+
+    <a href="#project" style={{ color: "white", textDecoration: "none" }}>Projects</a>
+    <a href="#contact" style={{ color: "white", textDecoration: "none" }}>Contact</a>
+  </div>
+</nav>
+}}>
+  <img src="/logo.png" style={{ height: 90 }} />
+
+  <div style={{ display: "flex", gap: 25, alignItems: "center" }}>
+    <a href="/" style={{ color: "white", textDecoration: "none" }}>Home</a>
+
     <div style={{ position: "relative" }}>
       <button
         onClick={(e) => {
