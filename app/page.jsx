@@ -48,19 +48,57 @@ const services = [
         </div>
       </nav>
 
-      <section style={{ minHeight: "78vh", padding: "90px 6%", color: "white", background: "linear-gradient(90deg, rgba(0,0,0,0.88), rgba(0,0,0,0.45)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80') center/cover", display: "flex", alignItems: "center" }}>
-        <div style={{ maxWidth: 720 }}>
-          <p style={{ color: "#c79a46", fontWeight: 800, letterSpacing: 2, marginBottom: 12 }}>LONDON OFFICE FIT OUT SPECIALISTS</p>
-          <h1 style={{ fontSize: "clamp(42px, 7vw, 82px)", lineHeight: 0.95, margin: 0, fontWeight: 900 }}>
-            OFFICE FIT OUT<br /><span style={{ color: "#c79a46" }}>LONDON</span>
-          </h1>
-          <p style={{ fontSize: 22, lineHeight: 1.45, marginTop: 24, maxWidth: 620 }}>
-            We design and build exceptional workspaces that inspire people, improve productivity and reflect your brand.
-          </p>
-          <div style={{ display: "flex", gap: 14, marginTop: 34, flexWrap: "wrap" }}>
-            <a href="#services" style={{ background: "#c79a46", color: "white", padding: "15px 24px", borderRadius: 4, textDecoration: "none", fontWeight: 800 }}>OUR SERVICES</a>
-            <a href="#projects" style={{ border: "1px solid white", color: "white", padding: "15px 24px", borderRadius: 4, textDecoration: "none", fontWeight: 800 }}>VIEW PROJECTS</a>
-          </div>
+      <section style={{
+  minHeight: "78vh",
+  padding: "90px 6%",
+  color: "white",
+  display: "flex",
+  alignItems: "center",
+  position: "relative",
+  overflow: "hidden"
+}}>
+  <style>
+    {`
+      @keyframes heroFade {
+        0% { opacity: 0; }
+        10% { opacity: 1; }
+        30% { opacity: 1; }
+        40% { opacity: 0; }
+        100% { opacity: 0; }
+      }
+    `}
+  </style>
+
+  <div style={{
+    position: "absolute",
+    inset: 0,
+    background: "linear-gradient(90deg, rgba(0,0,0,0.86), rgba(0,0,0,0.42))",
+    zIndex: 1
+  }} />
+
+  <div style={{
+    position: "absolute",
+    inset: 0,
+    zIndex: 0
+  }}>
+    {["IMG_1.JPEG","IMG_2.JPEG","IMG_3.JPEG","IMG_4.JPEG","IMG_5.JPEG"].map((img, i) => (
+      <div
+        key={img}
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundImage: `url('/projects/whittington/${img}')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: 0,
+          animation: "heroFade 25s infinite",
+          animationDelay: `${i * 5}s`
+        }}
+      />
+    ))}
+  </div>
+
+  <div style={{ maxWidth: 720, position: "relative", zIndex: 2 }}>
         </div>
       </section>
 
