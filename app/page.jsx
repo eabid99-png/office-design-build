@@ -22,10 +22,10 @@ export default function Home() {
   {/* LOGO */}
   <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
     <img
-      src="/logo.png"
-      alt="Workspace Design & Build London"
-      style={{ height: 55 }}
-    />
+  src="/logo.png"
+  alt="Workspace Design & Build London"
+  style={{ height: 55 }}
+/>
   </div>
 
   {/* PHONE */}
