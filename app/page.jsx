@@ -3,7 +3,7 @@ export default function Home() {
     <main style={{ fontFamily: "'Montserrat', Arial, sans-serif", margin: 0 }}>
 
       {/* NAV */}
-      <nav style={{
+     <nav style={{
   background: "#05080c",
   color: "white",
   padding: "18px 6%",
@@ -19,12 +19,7 @@ export default function Home() {
     <a href="/" style={{ color: "white", textDecoration: "none" }}>Home</a>
 
     <details style={{ position: "relative" }}>
-      <summary style={{
-        color: "white",
-        cursor: "pointer",
-        listStyle: "none",
-        fontSize: 16
-      }}>
+      <summary style={{ color: "white", cursor: "pointer", fontSize: 16 }}>
         Our Services ▼
       </summary>
 
@@ -48,6 +43,10 @@ export default function Home() {
 
     <a href="#project" style={{ color: "white", textDecoration: "none" }}>Projects</a>
     <a href="#contact" style={{ color: "white", textDecoration: "none" }}>Contact</a>
+
+    <a href="tel:02082529789" style={{ color: "white", textDecoration: "none", fontWeight: "bold" }}>
+      0208 252 9789
+    </a>
   </div>
 </nav>
 }}>
