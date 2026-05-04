@@ -10,10 +10,34 @@ export default function Home() {
     <main style={{ fontFamily: "'Montserrat', Arial, sans-serif", margin: 0 }}>
 
       {/* NAV */}
-      <nav style={{ background: "#05080c", color: "white", padding: "18px 6%", display: "flex", justifyContent: "space-between" }}>
-        <strong style={{ letterSpacing: 2 }}>WORKSPACE DESIGN & BUILD</strong>
-        <span>0208 252 9789</span>
-      </nav>
+      <nav style={{
+  background: "#05080c",
+  color: "white",
+  padding: "18px 6%",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center"
+}}>
+
+  {/* LOGO */}
+  <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+    <img
+      src="/logo.png"
+      alt="Workspace Design & Build London"
+      style={{ height: 55 }}
+    />
+  </div>
+
+  {/* PHONE */}
+  <a href="tel:02082529789" style={{
+    color: "white",
+    textDecoration: "none",
+    fontWeight: "bold"
+  }}>
+    0208 252 9789
+  </a>
+
+</nav>
 
       {/* HERO SLIDESHOW */}
       <section style={{ height: "70vh", position: "relative", overflow: "hidden" }}>
