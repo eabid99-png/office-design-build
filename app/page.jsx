@@ -85,7 +85,55 @@ export default function Home() {
           ))}
         </div>
       </section>
+<section id="fit-out-types" style={{ padding: "80px 6%", background: "#f8fafc", textAlign: "center" }}>
+  <p style={{ color: "#c79a46", fontWeight: 800 }}>FIT OUT TYPES</p>
+  <h2 style={{ fontSize: 38, marginTop: 8 }}>Office & Industrial Fit Out Services</h2>
+  <p style={{ maxWidth: 760, margin: "0 auto 40px", color: "#4b5563", lineHeight: 1.7 }}>
+    We deliver practical, high-quality fit out solutions for commercial offices, industrial units and specialist working environments across London and the surrounding areas.
+  </p>
 
+  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24, textAlign: "left" }}>
+    {[
+      {
+        title: "CAT A Fit Out",
+        text: "Landlord-ready spaces including ceilings, lighting, flooring, decoration and basic services."
+      },
+      {
+        title: "CAT B Fit Out",
+        text: "Fully finished workspaces tailored to the occupier, including meeting rooms, kitchens, furniture and branding."
+      },
+      {
+        title: "Office Refurbishment",
+        text: "Modernising existing offices to improve appearance, layout, comfort and performance."
+      },
+      {
+        title: "Design & Build",
+        text: "A complete service from initial concept and space planning through to construction and handover."
+      },
+      {
+        title: "Industrial Unit Fit Out",
+        text: "Practical fit out works for warehouses, workshops, trade counters and light industrial spaces."
+      },
+      {
+        title: "Mezzanine Offices",
+        text: "Creating additional office, storage or production space within industrial buildings."
+      },
+      {
+        title: "Warehouse Office Build",
+        text: "Internal office construction within warehouse and logistics environments."
+      },
+      {
+        title: "Dilapidations & Strip Out",
+        text: "End-of-lease strip out, reinstatement and repair works for commercial and industrial properties."
+      }
+    ].map((item) => (
+      <div key={item.title} style={{ background: "white", padding: 24, borderRadius: 12, boxShadow: "0 8px 24px rgba(0,0,0,0.08)" }}>
+        <h3 style={{ marginTop: 0 }}>{item.title}</h3>
+        <p style={{ color: "#4b5563", lineHeight: 1.6 }}>{item.text}</p>
+      </div>
+    ))}
+  </div>
+</section>
       <section style={{ background: "#0b1117", color: "white", padding: "38px 6%", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 20, textAlign: "center" }}>
         {["10+ Years Experience", "250+ Projects Completed", "1M+ Sq Ft Delivered", "98% Client Satisfaction"].map((stat) => (
           <strong key={stat} style={{ fontSize: 22, color: "#c79a46" }}>{stat}</strong>
