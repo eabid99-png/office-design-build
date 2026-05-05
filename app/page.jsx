@@ -141,12 +141,32 @@ export default function Home() {
     gap: 24,
     marginTop: 40
   }}>
-    {[
-      ["01", "Consultation", "We discuss your workspace requirements, budget and timeline.", "/slide1.jpg"],
-      ["02", "Design", "We plan the layout, finishes, lighting and practical details.", "/slide2.jpg"],
-      ["03", "Build", "Our team carries out the fit out works with care and precision.", "/slide3.jpg"],
-      ["04", "Completion", "We finish, inspect and hand over a workspace ready to use.", "/slide4.jpg"],
-    ].map(([num, title, text, img]) => (
+    [
+  [
+    "01",
+    "Consultation",
+    "We meet with you to understand your workspace needs, budget and timeline. Our team provides expert advice to ensure the project starts on the right track.",
+    "/slide1.jpg"
+  ],
+  [
+    "02",
+    "Design",
+    "We create a tailored design including layout, materials, finishes and lighting to maximise both functionality and visual impact of your workspace.",
+    "/slide2.jpg"
+  ],
+  [
+    "03",
+    "Build",
+    "Our skilled team delivers the full fit out with precision, managing every stage from construction to installation while maintaining high standards.",
+    "/slide3.jpg"
+  ],
+  [
+    "04",
+    "Completion",
+    "We carry out final checks, ensure quality finishes and hand over a fully completed workspace ready for immediate use.",
+    "/slide4.jpg"
+  ],
+].map(([num, title, text, img]) => (
       <div key={title} style={{
         background: "#0b1117",
         border: "1px solid #1f2937",
