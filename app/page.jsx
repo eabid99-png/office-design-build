@@ -168,7 +168,6 @@ export default function Home() {
     ))}
   </div>
 </section>
-
       <section id="contact" style={{ padding: "80px 6%", background: "#f5f5f5" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", background: "white", padding: 40 }}>
           <h2 style={{ textAlign: "center" }}>Contact Us</h2>
