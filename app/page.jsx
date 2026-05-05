@@ -2,49 +2,36 @@
 import { useState, useEffect } from "react";
 
 export default function Home() {
-  const slides = ["/slide1.jpg", "/slide2.jpg", "/slide3.jpg", "/slide4.jpg"];
-const [index, setIndex] = useState(0);
-
-useEffect(() => {
-  const interval = setInterval(() => {
-    setIndex((i) => (i + 1) % slides.length);
-  }, 4000);
-  return () => clearInterval(interval);
-}, []);
-
-  const gallery = [
-    "IMG_1.JPEG",
-    "IMG_2.JPEG",
-    "IMG_3.JPEG",
-    "IMG_4.JPEG",
-    "IMG_5.JPEG",
-    "IMG_7.JPEG",
-    "IMG_8.JPEG",
-    "IMG_9.JPEG",
-    "IMG_10.JPEG",
-    "IMG_11.JPEG",
+  const services = [
+    ["glass", "Glass Partitions"],
+    ["refurb", "Office Refurbishment"],
+    ["ceilings", "Suspended Ceilings"],
+    ["flooring", "Flooring"],
+    ["decorating", "Decorating"],
+    ["joinery", "Doors & Joinery"],
   ];
 
-  return (
-   <style>{`
-  .hero-slide {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    animation: slider 20s infinite;
-  }
+  const gallery = [
+    "IMG_1.JPEG","IMG_2.JPEG","IMG_3.JPEG","IMG_4.JPEG","IMG_5.JPEG",
+    "IMG_7.JPEG","IMG_8.JPEG","IMG_9.JPEG","IMG_10.JPEG","IMG_11.JPEG",
+  ];
 
-  @keyframes slider {
-    0% { background-image: url('/slide1.jpg'); }
-    25% { background-image: url('/slide2.jpg'); }
-    50% { background-image: url('/slide3.jpg'); }
-    75% { background-image: url('/slide4.jpg'); }
-    100% { background-image: url('/slide1.jpg'); }
-  }
-`}</style>
+  const slides = ["/slide1.jpg", "/slide2.jpg", "/slide3.jpg", "/slide4.jpg"];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((i) => (i + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <main style={{ fontFamily: "'Montserrat', Arial, sans-serif", margin: 0 }}>
+      <nav style={{
+        background: "#05080c", color: "white", padding: "18px 6%",
+        display: "flex", justifyContent: "space-between", alignItems: "center",
+        position: "relative", zIndex: 9999, flexWrap: "wrap", gap: 20
       }}>
         <img src="/logo.png" alt="Workspace Design & Build" style={{ height: 90 }} />
 
@@ -52,33 +39,16 @@ useEffect(() => {
           <a href="#home" style={{ color: "white", textDecoration: "none" }}>Home</a>
 
           <details style={{ position: "relative" }}>
-            <summary style={{ color: "white", cursor: "pointer" }}>
-              Our Services ▼
-            </summary>
-
+            <summary style={{ color: "white", cursor: "pointer" }}>Our Services ▼</summary>
             <div style={{
-              position: "absolute",
-              top: 30,
-              left: 0,
-              background: "white",
-              minWidth: 250,
-              boxShadow: "0 10px 30px rgba(0,0,0,0.35)",
-              zIndex: 99999
+              position: "absolute", top: 30, left: 0, background: "white",
+              minWidth: 250, boxShadow: "0 10px 30px rgba(0,0,0,0.35)", zIndex: 99999
             }}>
               {services.map(([id, name]) => (
-                <a
-                  key={id}
-                  href={`#${id}`}
-                  style={{
-                    display: "block",
-                    padding: 14,
-                    color: "#111",
-                    textDecoration: "none",
-                    borderBottom: "1px solid #eee"
-                  }}
-                >
-                  {name}
-                </a>
+                <a key={id} href={`#${id}`} style={{
+                  display: "block", padding: 14, color: "#111",
+                  textDecoration: "none", borderBottom: "1px solid #eee"
+                }}>{name}</a>
               ))}
             </div>
           </details>
@@ -92,19 +62,23 @@ useEffect(() => {
       </nav>
 
       <section id="home" style={{ height: "75vh", position: "relative", overflow: "hidden" }}>
-        <div className="hero-slide" />
         <div style={{
           position: "absolute",
           inset: 0,
+          backgroundImage: `url(${slides[index]})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          transition: "background-image 1s ease-in-out"
+        }} />
+
+        <div style={{
+          position: "absolute", inset: 0,
           background: "linear-gradient(90deg, rgba(0,0,0,0.65), rgba(0,0,0,0.15))"
         }} />
+
         <div style={{
-          position: "absolute",
-          top: "50%",
-          left: "6%",
-          transform: "translateY(-50%)",
-          color: "white",
-          maxWidth: 900
+          position: "absolute", top: "50%", left: "6%",
+          transform: "translateY(-50%)", color: "white", maxWidth: 900
         }}>
           <h1 style={{ fontSize: "clamp(42px, 6vw, 76px)", margin: 0, lineHeight: 1.05 }}>
             WORKSPACE DESIGN & BUILD<br />
@@ -114,13 +88,8 @@ useEffect(() => {
             Professional office fit out, refurbishment and workspace design across London.
           </p>
           <a href="#contact" style={{
-            display: "inline-block",
-            marginTop: 25,
-            background: "#c79a46",
-            color: "white",
-            padding: "14px 24px",
-            textDecoration: "none",
-            fontWeight: "bold"
+            display: "inline-block", marginTop: 25, background: "#c79a46",
+            color: "white", padding: "14px 24px", textDecoration: "none", fontWeight: "bold"
           }}>
             Get a Quote
           </a>
@@ -136,12 +105,7 @@ useEffect(() => {
 
       <section id="services" style={{ padding: "80px 6%", background: "#f5f5f5" }}>
         <h2>Our Services</h2>
-
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-          gap: 24
-        }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
           {services.map(([id, name]) => (
             <div key={id} id={id} style={{ background: "white", padding: 32 }}>
               <h3>{name}</h3>
@@ -159,19 +123,10 @@ useEffect(() => {
           A commercial workspace transformation delivered with a focus on practical layout, clean finishes and a professional working environment.
         </p>
 
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-          gap: 12,
-          marginTop: 30
-        }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12, marginTop: 30 }}>
           {gallery.map((img) => (
-            <img
-              key={img}
-              src={`/projects/whittington/${img}`}
-              alt="1 Whittington Avenue project"
-              style={{ width: "100%", height: 220, objectFit: "cover" }}
-            />
+            <img key={img} src={`/projects/whittington/${img}`} alt="1 Whittington Avenue project"
+              style={{ width: "100%", height: 220, objectFit: "cover" }} />
           ))}
         </div>
       </section>
@@ -195,20 +150,13 @@ useEffect(() => {
 
           <form action="https://formsubmit.co/hello@officedesignbuild.london" method="POST">
             <input type="hidden" name="_subject" value="New website enquiry" />
-
             <input name="name" placeholder="Your Name" required style={{ width: "100%", padding: 14, marginBottom: 14 }} />
             <input name="email" type="email" placeholder="Email Address" required style={{ width: "100%", padding: 14, marginBottom: 14 }} />
             <input name="phone" placeholder="Phone Number" style={{ width: "100%", padding: 14, marginBottom: 14 }} />
             <textarea name="message" placeholder="Tell us about your project" rows="6" required style={{ width: "100%", padding: 14, marginBottom: 14 }} />
-
             <button type="submit" style={{
-              background: "#c79a46",
-              color: "white",
-              padding: "15px 24px",
-              border: 0,
-              width: "100%",
-              fontWeight: "bold",
-              cursor: "pointer"
+              background: "#c79a46", color: "white", padding: "15px 24px",
+              border: 0, width: "100%", fontWeight: "bold", cursor: "pointer"
             }}>
               Send Enquiry
             </button>
