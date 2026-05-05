@@ -7,9 +7,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>{children}</body>
-      <style>{`
-.hero {
-  height: 80vh;
+<style>{`
+.hero-slide {
+  height: 100%;
   background-size: cover;
   background-position: center;
   animation: slider 20s infinite;
