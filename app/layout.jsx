@@ -8,19 +8,19 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>{children}</body>
       <style>{`
-.hero-slide {
-  height: 100%;
+.hero {
+  height: 80vh;
   background-size: cover;
   background-position: center;
-  animation: slide 16s infinite;
+  animation: slider 20s infinite;
 }
 
-@keyframes slide {
-  0% { background-image: url('/projects/whittington/IMG_1.JPEG'); }
-  25% { background-image: url('/projects/whittington/IMG_2.JPEG'); }
-  50% { background-image: url('/projects/whittington/IMG_3.JPEG'); }
-  75% { background-image: url('/projects/whittington/IMG_4.JPEG'); }
-  100% { background-image: url('/projects/whittington/IMG_1.JPEG'); }
+@keyframes slider {
+  0% { background-image: url('/slide1.jpg'); }
+  25% { background-image: url('/slide2.jpg'); }
+  50% { background-image: url('/slide3.jpg'); }
+  75% { background-image: url('/slide4.jpg'); }
+  100% { background-image: url('/slide1.jpg'); }
 }
 `}</style>
     </html>
