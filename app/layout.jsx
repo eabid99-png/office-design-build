@@ -1,13 +1,15 @@
 export const metadata = {
   title: "Workspace Design & Build London",
-  description: "Office fit out specialists in London",
+  description: "Workspace design and build specialists in London",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        {children}
+      <body style={{ margin: 0 }}>{children}</body>
+    </html>
+  );
+}
 
         <style>{`
           .hero-slide {
