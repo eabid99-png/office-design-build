@@ -1,3 +1,6 @@
+"use client";
+import { useState, useEffect } from "react";
+
 export default function Home() {
   const services = [
     ["glass", "Glass Partitions"],
