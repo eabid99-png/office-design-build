@@ -131,17 +131,43 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="process" style={{ padding: "80px 6%", background: "#05080c", color: "white" }}>
-        <h2>Our Process</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 20 }}>
-          {["Consultation", "Design", "Build", "Completion"].map((step, i) => (
-            <div key={step} style={{ border: "1px solid #333", padding: 25 }}>
-              <h3 style={{ color: "#c79a46" }}>0{i + 1}</h3>
-              <h4>{step}</h4>
-            </div>
-          ))}
+      <section id="process" style={{ padding: "90px 6%", background: "#05080c", color: "white" }}>
+  <p style={{ color: "#c79a46", letterSpacing: 2, fontWeight: "bold" }}>HOW WE WORK</p>
+  <h2 style={{ fontSize: 42, marginTop: 10 }}>Our Process</h2>
+
+  <div style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+    gap: 24,
+    marginTop: 40
+  }}>
+    {[
+      ["01", "Consultation", "We discuss your workspace requirements, budget and timeline.", "/slide1.jpg"],
+      ["02", "Design", "We plan the layout, finishes, lighting and practical details.", "/slide2.jpg"],
+      ["03", "Build", "Our team carries out the fit out works with care and precision.", "/slide3.jpg"],
+      ["04", "Completion", "We finish, inspect and hand over a workspace ready to use.", "/slide4.jpg"],
+    ].map(([num, title, text, img]) => (
+      <div key={title} style={{
+        background: "#0b1117",
+        border: "1px solid #1f2937",
+        overflow: "hidden",
+        boxShadow: "0 20px 40px rgba(0,0,0,0.25)"
+      }}>
+        <img
+          src={img}
+          alt={title}
+          style={{ width: "100%", height: 170, objectFit: "cover" }}
+        />
+
+        <div style={{ padding: 26 }}>
+          <h3 style={{ color: "#c79a46", fontSize: 28, margin: 0 }}>{num}</h3>
+          <h4 style={{ fontSize: 22, marginBottom: 10 }}>{title}</h4>
+          <p style={{ color: "#cbd5e1", lineHeight: 1.6 }}>{text}</p>
         </div>
-      </section>
+      </div>
+    ))}
+  </div>
+</section>
 
       <section id="contact" style={{ padding: "80px 6%", background: "#f5f5f5" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", background: "white", padding: 40 }}>
