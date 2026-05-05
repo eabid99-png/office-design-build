@@ -2,14 +2,15 @@
 import { useState, useEffect } from "react";
 
 export default function Home() {
-  const services = [
-    ["glass", "Glass Partitions"],
-    ["refurb", "Office Refurbishment"],
-    ["ceilings", "Suspended Ceilings"],
-    ["flooring", "Flooring"],
-    ["decorating", "Decorating"],
-    ["joinery", "Doors & Joinery"],
-  ];
+  const slides = ["/slide1.jpg", "/slide2.jpg", "/slide3.jpg", "/slide4.jpg"];
+const [index, setIndex] = useState(0);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setIndex((i) => (i + 1) % slides.length);
+  }, 4000);
+  return () => clearInterval(interval);
+}, []);
 
   const gallery = [
     "IMG_1.JPEG",
